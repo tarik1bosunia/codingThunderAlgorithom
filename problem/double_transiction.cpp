@@ -37,7 +37,10 @@ int main(){
        int profit = sellingPrice - purchasePrice;
        profits.push_back(profit);
     }
-    sort(profits.begin(), profits.end());
+    sort(profits.begin(), profits.end(), greater<int> ());
+    for(auto &item: profits){
+        cout << item << endl;
+    }
     cout << "Max profit: " << profits[0] + profits[1] << endl;
     
     return 0;
