@@ -23,7 +23,7 @@ int main(){
     for(auto i = ar.begin(); i != ar.end(); i++) {
        int purchasePrice = (*i);
       
-       sellingv.assign(i, ar.end());
+       sellingv.assign( i+ 1, ar.end());
        sort(sellingv.begin(), sellingv.end(), greater<int> ());
 
        for(int j = 0 ; j < max_transiction_time; j++){
